@@ -1,4 +1,3 @@
-
 import express from "express";
 const app = express();
 
@@ -6,17 +5,16 @@ import environments from "./src/api/config/environments.js"; // Importamos las v
 const PORT = environments.port;
 
 import connection from "./src/api/database/db.js"; // Importamos la conexion a la BBDD para poder enviarle sentencias SQL
-import cors from "cors"; // Importamos el modulo CORS para gestionar las politicas de seguridad de nuestro backend
-
+import cors from "cors";
 
 
 app.use(cors()); //Middleware CORS basico que permite todas las solicitudes
 
 
-
 app.get("/", (req, res) => {
-    res.send("apgina principal del backend");
+    res.send("Holis mundo desde Express.js");
 });
+
 
 // Traer todos los productos
 app.get("/products", async (req, res) => {
