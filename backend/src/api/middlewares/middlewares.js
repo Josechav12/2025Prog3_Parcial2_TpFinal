@@ -2,7 +2,7 @@
 // Middleware logger para mostrar por consola todas las peticiones a nuestro servidor
 const loggerUrl = (req, res, next) => {
     console.log(`[${new Date().toLocaleString()}] ${req.method} ${req.url}`);
-   
+
     // Con next continuamos al siguiente middleware o a la respuesta
     next();
 }
@@ -26,8 +26,13 @@ const validateId = (req, res, next) => {
     next();
 }
 
+const saluditos = (req, res, next) => {
+    console.log("hola desde el middleware saluditos");
+    next();
+}
 
 export {
     loggerUrl,
-    validateId
+    validateId,
+    saluditos
 }
