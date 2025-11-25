@@ -13,6 +13,7 @@ import { loggerUrl, saluditos } from "./src/api/middlewares/middlewares.js";
 import { productRoutes } from "./src/api/routes/index.js";
 import { viewRoutes } from "./src/api/routes/index.js";
 import { join, __dirname } from "./src/api/utils/index.js";
+import connection from "./src/api/database/db.js";
 
 
 /*====================
@@ -42,11 +43,18 @@ app.set("views", join(__dirname, "src/views")); // Indicamos la ruta de las vist
 ==================*/
 
 // Endpoint que no devuelve ninguna respuesta y queda la llamada colgada y la conexion sin terminar
-app.get("/test", (req, res) => {
-    console.log("Este endpoint no ofrece ninguna respuesta y se queda aca trabado...");
-});
+//app.get("/test", (req, res) => {
+//    console.log("Este endpoint no ofrece ninguna respuesta y se queda aca trabado...");
+//});
 
 app.use("/api/products", productRoutes);
+
+app.use("/", viewRoutes);
+// app.use("/dashboard", viewRoutes);
+// app.use("/consultar", viewRoutes);
+// app.use("/crear", viewRoutes);
+// app.use("/modificar", viewRoutes);
+// app.use("/eliminar", viewRoutes);
 
 
 

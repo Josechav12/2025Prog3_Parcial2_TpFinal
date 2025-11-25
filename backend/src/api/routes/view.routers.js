@@ -1,7 +1,6 @@
 import { Router } from "express";
 const router = Router();
-export { router };
-export default router;
+//export { router };
 
 //rutas de las vistas
 router.get("/dashboard", (req, res) => {
@@ -23,3 +22,5 @@ router.get("/modificar", (req, res) => {
 router.get("/eliminar", (req, res) => {
     res.render("eliminar");
 })
+
+export default router;
