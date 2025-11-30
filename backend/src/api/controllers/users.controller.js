@@ -34,7 +34,7 @@ export const userLogin = async (req, res) => {
 
         // Evitamos consulta innecesaria
         if(!correo || !password) {
-            return res.render("login", {
+            return res.render("/login", {
                 error: "Todos los campos son obligatorios!"
             });
         }
@@ -43,7 +43,7 @@ export const userLogin = async (req, res) => {
 
         // Si no existen usuarios con ese correo o password
         if(rows.length === 0) {
-            return res.render("login", {
+            return res.render("/login", {
                 error: "Credenciales incorrectas!"
             });
         }
@@ -80,6 +80,6 @@ export const userLogout = (req, res) => {
             })
         }
 
-        res.redirect("login"); // Redirigimos a login
+        res.redirect("/login"); // Redirigimos a login
     })
 }

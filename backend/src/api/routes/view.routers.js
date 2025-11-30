@@ -11,19 +11,19 @@ router.get("/dashboard", (req, res) => {
     res.render("dashboard");
 })
 
-router.get("/consultar", (req, res) => {
+router.get("/consultar", requireLogin,(req, res) => {
     res.render("consultar");
 })
 
-router.get("/crear", (req, res) => {
+router.get("/crear", requireLogin,(req, res) => {
     res.render("crear");
 })
 
-router.get("/modificar", (req, res) => {
+router.get("/modificar", requireLogin,(req, res) => {
     res.render("modificar");
 })
 
-router.get("/eliminar", (req, res) => {
+router.get("/eliminar", requireLogin,(req, res) => {
     res.render("eliminar");
 })
 router.get("/login", (req, res) => {

@@ -18,6 +18,8 @@ app.use(express.urlencoded({
 </div>
  <% } %>
 
+<%- include("partials/nav.login.ejs") %>
+
 <h1 id="login-title">Login</h1>
 <form id="login-form" action="/api/users/login" method="POST" autocomplete="off">
 
@@ -31,15 +33,6 @@ app.use(express.urlencoded({
     <input type="button" id="acceso" class="btn-login" value="Acceso rápido">
 </form>
 
-<script>
-    let emailUser = document.getElementById("correoUser");
-    let passwordUser = document.getElementById("passwordUser");
-
-    let acceso_rapido = document.getElementById("acceso");
-    acceso_rapido.addEventListener("click", () => {
-        emailUser.value = "gabi@lopez.com";
-        passwordUser.value = "gabi"
-    });
-</script>
+<script src="/js/login.js"></script>
 
 <%- include("partials/footer.ejs") %>
