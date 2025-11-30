@@ -1,10 +1,11 @@
 import { Router } from "express";
 const router = Router();
-import { vistaProductos } from "../controllers/view.controllers.js";
+import { vistaProductos, mostrarBienvenida } from "../controllers/view.controllers.js";
 import { requireLogin } from "../middlewares/middlewares.js";
 
 //rutas de las vistas
-router.get("/", requireLogin, vistaProductos);
+router.get("/", mostrarBienvenida);
+//router.get("/", requireLogin, vistaProductos);
 
 router.get("/dashboard", (req, res) => {
     res.render("dashboard");

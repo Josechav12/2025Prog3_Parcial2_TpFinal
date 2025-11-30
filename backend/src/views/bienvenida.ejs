@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include("partials/head.ejs") %>
+    <title>Administrador | ElectroComponentes</title>
+</head>
+
+<body>
+
+    <%- include("partials/nav.bienvenida.ejs") %>
+
+    <main id="bienvenida-main">
+        <h1>Bienvenido a Electroniks</h1>
+        <p> Conocé todos nuestros productos. Tenemos lo último en microcontroladores y placas de desarrollo.</p>
+    </main>
+    <div>
+        <form id="login-form" action="/dashboard" method="GET" autocomplete="off">
+            <input type="submit" class="btn-login" value="Conocer más">
+        </form>
+    </div>
+<script src="/js/bienvenida.js"></script>
+
+    <%- include("partials/footer.ejs") %>
+</body>
+</html>

@@ -17,24 +17,6 @@ body {
     padding: 0;
 }
 
-/* Botones */
-button,
-.btn {
-    background-color: var(--color-primario);
-    color: var(--color-fondo);
-    border: none;
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-button:hover,
-.btn:hover {
-    background-color: #ffe44d; 
-}
-
 /* Cabecera y navegación */
 header {
     text-align: center;
@@ -43,17 +25,26 @@ header {
 }
 
 nav {
+    display: flex;
     text-align: center;
     padding: 10px;
     background-color: var(--color-secundario);
 }
 
-nav a {
-    text-decoration: none;
+nav li {
     color: var(--color-texto);
-    margin: 0 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
     font-weight: bold;
 }
+
+/* Pantalla bienvenida*/
+
+#bienvenida-main h1{
+    font-size: 50px;
+}
+
 /* Marca de agua con los nombres */
 #marca-agua {
     position: fixed;
@@ -61,4 +52,16 @@ nav a {
     left: 10px;
     font-size: 0.8rem;
     color: rgb(0, 0, 0);
+}
+
+#div-boton-logout {
+    margin-left: auto;
+}
+
+#btn-login-oculto {
+    font-size: 26px;
+    background-color: var(--color-secundario);
+    text-decoration: none;
+    color: var(--color-primario);
+    font-weight: bold;
 }

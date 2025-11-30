@@ -64,7 +64,7 @@ select {
 input[type="submit"],
 button {
     background-color: var(--color-primario);
-    color: var(--acento);
+    color: var(--color-texto);
     font-weight: bold;
     border: none;
     border-radius: 5px;
@@ -79,24 +79,51 @@ button:hover {
 }
 
 /* Cards de productos en dashboard */
+#contenedor-productos {
+    padding: 10px 100px 10px 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+}
+
 .card-producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: white;
     border: 1px solid var(--color-primario);
     border-radius: 8px;
-    padding: 10px;
     width: 250px;
     margin: 15px;
+    padding: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    vertical-align: top;
+
+}
+
+.card-producto-innerdiv {
+    margin-top: auto;
 }
 
 .card-producto img {
+    height: 250px;
+    width: 250px;
     width: 100%;
     border-radius: 6px;
 }
 
+
 /* Contenedor de los productos buscados por id */
+
+#contenedor-productos-buscados {
+    display: flex;
+    justify-content: center;
+}
+
+#consulta-prod-div {
+    display: flex;
+    padding: 10;   
+}
+
 #lista-productos {
     position: relative;
     margin-top: 30px;
@@ -105,31 +132,33 @@ button:hover {
 
 /* Imagen */
 #prod-img {
-    position: absolute;
-    left: 0;
-    top: 0;
     width: 150px;
     height: auto;
 }
 
 /* Info */
 #prod-info {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
     text-align: center;
 }
 
 /* Botón */
 #prod-btn {
-    position: absolute;
-    right: 0;
-    top: 30px;
+    margin: auto;
+    height: 30px;
     padding: 8px 12px;
 }
 
 /* login */
+#login-title {
+    margin-top: 25px;
+}
+
+#login-form {
+    margin-top: 50px;
+}
 .error-message {
     padding: 10px;
     border: 2px solid #eb99a1;
@@ -143,27 +172,18 @@ button:hover {
 }
 
 /* cerrar sesión */
-#logout input[type="submit"] {
+
+.btn-login {
     background-color: var(--color-primario);
     color: var(--color-secundario); 
     font-weight: bold;
     border: none;
+    width: 50%;
     padding: 8px 14px;
     border-radius: 5px;
     cursor: pointer;
     margin:auto;
     display: block;
-}
-
-#login-form input[type="button"] {
-    background-color: var(--color-primario);
-    color: var(--color-secundario);
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    padding: 10px;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
 }
 
 /* Hover uniforme para ambos botones */

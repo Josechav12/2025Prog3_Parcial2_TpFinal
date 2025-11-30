@@ -38,13 +38,21 @@ function mostrarProductos(productos) {
                     <div class="card-producto">
                         <img src="${prod.imagen}" alt="${prod.nombre}">
                         <h3>${prod.nombre}</h3>
-                        <p>Id: ${prod.id}</p>
-                        <p>$${prod.precio}</p>
+                        <div class="card-producto-innerdiv">    
+                            <p>Id: ${prod.id}</p>
+                            <p>$${prod.precio}</p>
+                            <button onClick="agregarACarrito(${prod.id})">Agregar al carrito</button>
+                        </div>
                     </div>
                 `;
         contenedorProductos.innerHTML = htmlProductos;
     })
 }
+
+function agregarACarrito(idProducto) {
+    console.log(`Agregado ${idProducto} al carrito.`)
+}
+
 function init() {
     obtenerProductos();
 }

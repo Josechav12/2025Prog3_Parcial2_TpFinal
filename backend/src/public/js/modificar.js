@@ -51,6 +51,7 @@ getProduct_form.addEventListener("submit", async (event) => {
 function mostrarProducto(producto) {
     console.table(producto);
     let htmlProducto = `
+                <div id="consulta-prod-div">
                     <img id="prod-img" src="${producto.imagen}" alt="${producto.nombre}">
 
                     <div id="prod-info">
@@ -60,6 +61,7 @@ function mostrarProducto(producto) {
                     </div>
 
                     <button id="prod-btn">Modificar</button>
+                </div>
                 `;
 
     listaProductos.innerHTML = htmlProducto;

@@ -22,3 +22,7 @@ export const vistaProductos = async (req, res) => {
         console.error(error)
     }
 }
+
+export const mostrarBienvenida = async (req, res) => {
+    res.render("bienvenida");
+}

@@ -56,14 +56,16 @@ getProduct_form.addEventListener("submit", async (event) => {
 function mostrarProducto(producto) {
     console.table(producto);
     let htmlProducto = `
-                <img id="prod-img" src="${producto.imagen}" alt="${producto.nombre}">
+                <div id="consulta-prod-div">
+                    <img id="prod-img" src="${producto.imagen}" alt="${producto.nombre}">
 
-                <div id="prod-info">
-                    <p><strong>ID:</strong> ${producto.id}</p>
-                    <p><strong>Nombre:</strong> ${producto.nombre}</p>
-                    <p><strong>Precio:</strong> $${producto.precio}</p>
+                    <div id="prod-info">
+                        <p><strong>ID:</strong> ${producto.id}</p>
+                        <p><strong>Nombre:</strong> ${producto.nombre}</p>
+                        <p><strong>Precio:</strong> $${producto.precio}</p>
+                    </div>
                 </div>
-            `;
+                `;
 
     listaProductos.innerHTML = htmlProducto;
 }
